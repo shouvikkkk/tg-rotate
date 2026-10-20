@@ -1,0 +1,19 @@
+[project]
+name = "tg-rotate"
+version = "0.1.0"
+description = "Telegram bot token rotation supervisor: replace every copy, then verify the running service actually uses the new token"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Shouvik Maji" }]
+keywords = ["telegram", "bot", "token", "rotation", "devops", "security"]
+
+[project.scripts]
+tg-rotate = "tg_rotate.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["tg_rotate*"]
